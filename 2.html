@@ -1,23 +1,74 @@
 <!doctype html>
 <html>
 <head>
-<title>우리 결혼해요</title>
-<meta charset = "utf-8">
-<style>
-  a {
-    color:red;
+  <title>홈페이지</title>
+  <meta charset = "utf-8">
+  <style>
+  #grid {
+      border:5px solid pink;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
   }
-</style>
+    a {
+      text-decoration:none;
+    }
+    h1 {
+        font-size:45px;
+        text-align:center;
+        border-bottom:1px solid red;
+        padding:20px;
+      }
+      div{
+        border:3px solid gray;
+        text-align:center;
+      }
+  </style>
 </head>
 <body>
-<h1><a href="index.html">촬영 선택</a></H1>
-<ol>
-  <li><a href="hj.html">스냅촬영</a></li>
-  <li><a href="2.html">동영상촬영</a></li>
-  <li><a href="3.html">촬영 후기</a></li>
-</ol>
-<h2>동영상촬영</h2>
-이름
-<p><a href= target="_blank" title="인스타그램 바로가기">문의 : 인스타그램</a></p>
+  <p align="right">
+  <input id="nightday" type ="button" value="night" onclick="
+  var target = document.querySelector('body')
+  if(this.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+
+
+    while(i < alist.length){
+      alist[i].style.color = 'powderblue';
+      i = i + 1;}
+    } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1;}
+  }
+">
+</p>
+<h1><a href="index.html"><font color="red">홈페이지이름</font></a></H1>
+  <div id="grid">
+  <div><a href="hj.html" class="saw">프로필</a></div>
+  <div><a href="2.html" id="now">사진관</a></div>
+  <div><a href="3.html">방명록</a></div>
+</div>
+<h2>관광</h2>
+<p>예시<br>
+<strong>장소 : <u>북촌한옥마을</u></strong></p>
+<img src="한옥마을.jpg" width="50%"">
+<p><a href="" target="_blank" title="인스타그램 바로가기">문의 : 인스타그램</a></p>
+<script>
+var i = 0;
+while(i < 5){
+ document.write("<li>"+i+"번게시판");
+  i = i + 1
+}
+</script>
+
 </body>
 </html>
