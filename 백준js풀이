@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+</head>
+<body>
+<script>
+  function sum(left, right){
+  document.write(left + right);
+  }
+ sum(2,3)
+</script>
+<script>
+  function sumcolor(left, right){
+  document.write('<div style="color:red">'+(left+right)+'</div>');
+  }
+ sumcolor(2,3)
+</script>
+
+<script>
+  function sumreturn(left, right){
+  return left + right;
+  }
+  document.write('<div style="color:blue">'+sumreturn(2,6)+'</div>')
+</script>
+
+
+</body>
+</html>
